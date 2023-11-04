@@ -15,7 +15,10 @@ const Login = () => {
                 <p className='login-link'>to continue to YouTube</p>
 
                 <div className='email-div'>
-                    <input type='text' placeholder='Email or phone' />
+                    <input type='text' />
+                    <label htmlFor="">
+                        Email or Phone
+                    </label>
                 </div>
 
                 <p id='forgot-email'>Forgot email?</p>
