@@ -15,7 +15,7 @@ const Login = () => {
                 <p className='login-link'>to continue to YouTube</p>
 
                 <div className='email-div'>
-                    <input type='text' />
+                    <input style={{ width: '84%', height: '50px', marginTop: '30px' }} type='text' />
                     <label htmlFor="">
                         Email or Phone
                     </label>
