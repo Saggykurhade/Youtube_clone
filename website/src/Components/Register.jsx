@@ -15,10 +15,16 @@ const Register = () => {
         <p className='register-link'>Enter your name</p>
 
         <div className='name-div'>
-          <input type='text' placeholder='First name' />
+          <input style={{ width: '84%', height: '50px', marginTop: '30px' }} type='text'/>
+          <label htmlFor="">
+            First name
+          </label>
         </div>
         <div className='name-div'>
-          <input type='text' placeholder='Last name (optional)' />
+          <input style={{ width: '84%', height: '50px', marginTop: '30px' }} type='text'/>
+          <label htmlFor="">
+          Last name (optional)
+          </label>
         </div>
 
         <div id='next-div'>

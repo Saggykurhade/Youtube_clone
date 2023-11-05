@@ -32,23 +32,36 @@
 }
 
 .name-div {
-    width: 80%;
-    height: 56px;
-    border: 0.5px solid rgba(128, 128, 128, 0.537);
-    border-radius: 5px;
-    margin: auto;
-    margin-top: 7%;
+    position: relative;
+    z-index: 5;
 }
 
 .name-div input {
-    width: auto;
-    height: auto;
-    float: left;
-    margin-left: 15px;
-    margin-top: 20px;
+    margin-left: 35px;
+    border: 0.5px solid rgba(128, 128, 128, 0.537);
+    border-radius: 5px;
+}
+
+.name-div label {
+    position: absolute;
+    margin-top: 24px;
     font-size: 16px;
-    border: none;
-    outline: none;
+    color: gray;
+    left: 50px;
+    transform: translateY(20px);
+    transition: 200ms ease-in-out;
+}
+
+.name-div input:focus + label {
+    transform: translateY(-7px);
+    transition: 200ms ease-in-out;
+    color:blue;
+    background-color: white;
+    width: fit-content;
+}
+
+.name-div input:focus {
+    outline: 1.5px solid blue;
 }
 
 #next-div button {
