@@ -2,13 +2,13 @@ import React from 'react'
 import './header.css'
 
 const Header = () => {
+    
     return (
         <div className='container-header'>
 
             <div className="main-header">
-
                 <div className="bar-logo">
-                    <i class="fa-solid fa-bars"></i>
+                    <i class="fa-solid fa-bars fa-lg"></i>
                     <img src="images/YouTube-logo.svg.png" alt="" />
                 </div>
 
@@ -30,19 +30,17 @@ const Header = () => {
                 <div className="vid-not-sin">
                     <div className="v-n-s-flx">
                         <div className="vid-ic">
-                            <i class="fa-solid fa-video"></i>
+                            <i class="fa-solid fa-video fa-lg"></i>
                         </div>
                         <div className="not-ic">
-                            <i class="fa-regular fa-bell"></i>
+                            <i class="fa-regular fa-bell fa-lg"></i>
                         </div>
                         <div className="sin-ic">
                             <img src="images/channel-logo.jpg" alt="" />
                         </div>
                     </div>
                 </div>
-
             </div>
-
         </div>
     )
 }
