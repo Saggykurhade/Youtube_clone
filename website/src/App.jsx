@@ -4,6 +4,8 @@ import Homepage from './Components/Homepage';
 import Login from './Components/Login';
 import Register from './Components/Register';
 import OneVideo from './Components/OneVideo';
+import Profile from './Components/Profile';
+import History from './Components/History';
 
 function App() {
   return (
@@ -12,6 +14,8 @@ function App() {
       <Route exact path='/Login' element={<Login />} />
       <Route exact path='/Register' element={<Register />} />
       <Route exact path='/OneVideo' element={<OneVideo />} />
+      <Route exact path='/Profile' element={<Profile />} />
+      <Route exact path='/History' element={<History />} />
     </Routes>
   );
 }
