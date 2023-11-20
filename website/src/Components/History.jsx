@@ -1,13 +1,13 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import './history.css';
 import Header from './Header'
+import './history.css';
 
 
 const History = () => {
-    
-    const router=useNavigate()
-    
+
+    const router = useNavigate()
+
     const [data, setData] = useState([
         {
             image: 'https://i.ytimg.com/vi/ovKVqo-L2EM/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDwAtDzt6chmYEXuvjP5HG0eOtkUQ',
@@ -70,92 +70,122 @@ const History = () => {
             title: 'evergreen songs hindi Hits #kumarsanu #oldisgoldsongs'
         }
     ])
-    
+
     return (
         <>
-        <Header/>
-        <div id='HistoryScreen'>
-            <div className='HistoryBody'>
-            <div className='homeleft'>
-                        <i style={{ marginTop: '25px' }} class="fa-solid fa-house fa-lg"></i>
-                        <span onClick={()=>router("/")}>Home</span><br />
-                        <i class="fa-solid fa-photo-film fa-lg"></i>
-                        <span>Shorts</span><br />
-                        <i class="fa-solid fa-folder-minus fa-lg"></i>
-                        <span>Subscriptions</span><br />
-                        <div id='borderleftbottom'></div>
-                        <i style={{ marginTop: '25px' }} class="fa-brands fa-youtube fa-lg"></i>
-                        <span onClick={()=>router("/you")}>You</span> <br />
-                        <i class="fa-solid fa-clock-rotate-left"></i>
-                        <span>Histroy</span>
-                        <div style={{ marginTop: '-10px' }} id='borderleftbottom'></div>
-                        <div className='exploreleft'>Explore</div>
-                        <i style={{ marginTop: '30px' }} class="fa-solid fa-fire-flame-curved"></i>
-                        <span>Trending</span><br />
-                        <i class="fa-solid fa-bag-shopping"></i>
-                        <span>Shopping bag</span><br />
-                        <i class="fa-solid fa-music"></i>
-                        <span>Music</span><br />
-                        <i class="fa-solid fa-film"></i>
-                        <span>Movies</span><br />
-                        <i class="fa-solid fa-life-ring"></i>
-                        <span>Live</span><br />
-                        <i class="fa-solid fa-gamepad"></i>
-                        <span>Gaming</span><br />
-                        <i class="fa-solid fa-newspaper"></i>
-                        <span>News</span><br />
-                    </div>
-                <div className='HistoryRight'>
-                    <div className='HistoryRightBody'>
-                        <div className='RightBody-left'>
-                        <h1 className='History-h1'>Watch history</h1>
-                            <h2>Today</h2>
-                            <div className='history-vids'>
-                                {data.map((pro) => (
-                                    <div className='div-main'>
-                                        <div className='history-thumbnail'>
-                                            <img src={pro.image}/>
-                                        </div>
-                                        <div className='history-details'>
-                                            <p className='history-title'>{pro.title}</p>
-                                            <span className='history-owner'>{pro.owner}<i className='history-check' class="fa-solid fa-check"></i></span>
-                                            <span className='history-views'>{pro.views}</span>
-                                            <p className=''>
-
-                                            </p>
-                                        </div>
-                                    </div>
-                                ))}
-                            </div>
+            <Header />
+            
+            <div id='HistoryScreen'>
+                <div className='HistoryBody'>
+                    <div className="history-left">
+                        <div className="history-1">
+                            <ul>
+                                <li><i class="fa-solid fa-house"></i>Home</li>
+                                <li><i class="fa-brands fa-youtube"></i>Shorts</li>
+                                <li><i class="fa-brands fa-square-youtube"></i>Subscription</li>
+                            </ul>
                         </div>
-                        <div className='RightBody-right'>
-                            <div className='search-history'>
-                            <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-                            <input type='text' placeholder='Search watch history'/>
+                        <hr />
+
+                        <div className="history-1">
+                            <li><h3>You </h3> </li>
+                            <ul>
+                                <li><i class="fa-regular fa-user"></i>Your Channel</li>
+                                <li><i class="fa-solid fa-clock-rotate-left"></i>history</li>
+                                <li><i class="fa-regular fa-circle-play"></i>your videos</li>
+                                <li><i class="fa-regular fa-clock"></i>watch later</li>
+                                <li><i class="fa-solid fa-download"></i>downloads</li>
+                                <li><i class="fa-regular fa-thumbs-up"></i>liked videos</li>
+                            </ul>
+                        </div>
+                        <hr />
+
+                        <div className="history-1">
+                            <li><h3>Subscriptions</h3></li>
+                            <ul>
+                                <li><i class="fa-solid fa-house"></i>Home</li>
+                                <li><i class="fa-solid fa-circle-plus"></i>Browse Channels</li>
+
+                            </ul>
+                        </div>
+                        <hr />
+
+                        <div className="history-1">
+                            <li><h2>Explore</h2></li>
+                            <ul>
+                                <li><i class="fa-solid fa-fire"></i>Trending</li>
+                                <li><i class="fa-brands fa-youtube"></i>Shopping</li>
+                                <li><i class="fa-brands fa-square-youtube"></i>Music</li>
+                                <li>Films</li>
+                                <li>live</li>
+                                <li>Gaming</li>
+                                <li>News</li>
+                                <li>Sport</li>
+                                <li>Learning</li>
+                                <li>Fahio & beauty</li>
+                                <li>Podcast</li>
+                            </ul>
+                        </div>
+                        <hr />
+                    </div>
+                    
+                    <div className='HistoryRight'>
+                        <div className='HistoryRightBody'>
+                            <div className='RightBody-left'>
+                                <h1 className='History-h1'>Watch history</h1>
+                                <h2>Today</h2>
+                                <div className='history-vids'>
+                                    {data.map((pro) => (
+                                        <div className='div-main'>
+                                            <div style={{ marginTop: "20px" }} className='history-thumbnail'>
+                                                <img src={pro.image} />
+                                            </div>
+                                            <div className='history-details'>
+                                                <p style={{ marginTop: "20px" }} className='history-title'>{pro.title}</p>
+                                                <span className='history-owner'>{pro.owner}<i className='history-check' class="fa-solid fa-check"></i></span>
+                                                <span className='history-views'>{pro.views}</span>
+                                                <p className=''></p>
+                                            </div>
+                                        </div>
+                                    ))}
+                                </div>
                             </div>
-                            <div className='clear-history'>
-                            <i class="fa-solid fa-trash-can fa-lg"></i>
-                            <p>clear all watch history</p>
-                            </div>
-                            <div className='clear-history'>
-                            <i style={{marginLeft : '2px', marginRight : '14px'}} class="fa-solid fa-pause fa-lg"></i>
-                            <p>Pause watch history</p>
-                            </div>
-                            <div className='clear-history'>
-                            <i class="fa-solid fa-gear fa-lg"></i>
-                            <p>Manage all history</p>
-                            </div>
-                            <div className='right-last-div'>
-                                <p>Comments</p>
-                                <p>Community posts</p>
-                                <p>Live chat</p>
+
+                            <div className='RightBody-right'>
+                                <div className='search-history'>
+                                    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+                                    <input type='text' placeholder='Search watch history' />
+                                </div>
+
+                                <div className='clear-history'>
+                                    <i class="fa-solid fa-trash-can fa-lg"></i>
+                                    <p>clear all watch history</p>
+                                </div>
+
+                                <div className='clear-history'>
+                                    <i style={{ marginLeft: '2px', marginRight: '14px' }} class="fa-solid fa-pause fa-lg"></i>
+                                    <p>Pause watch history</p>
+                                </div>
+
+                                <div className='clear-history'>
+                                    <i class="fa-solid fa-gear fa-lg"></i>
+                                    <p>Manage all history</p>
+                                </div>
+
+                                <div className='right-last-div'>
+                                    <p>Comments</p>
+                                    <p>Community posts</p>
+                                    <p>Live chat</p>
+                                </div>
+
                             </div>
 
                         </div>
                     </div>
+
                 </div>
+
             </div>
-        </div>
         </>
     )
 }

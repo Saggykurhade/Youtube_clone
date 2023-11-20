@@ -1,45 +1,68 @@
-#you-screen{
+#you-screen {
     border: 2px solid black;
     width: 100%;
     height: 690px;
 }
-.you-body{
-    height : 87%;
+
+.you-body {
+    height: 87%;
     width: 94%;
     /* border: 1px solid red; */
     display: flex;
     justify-content: space-between;
 }
-.you-left{
-    height: 300px;
-    width: 70px;
-    /* border: 1px solid black; */
+
+.history-left {
+    width: 17%;
+    height: 100%;
+    /* background-color: aqua; */
+    overflow-y: scroll;
     position: sticky;
-    top: 13.5%;
-}
-.you-left > span{
-    font-size: 10px;
-}
-.you-left > i{
-    margin-top: 40px;
+    top: 0;
+    padding-left: 2%;
+    padding-top: 0px;
+    background: #fff;
 }
 
-.you-right{
+.history-1 {
+    margin-bottom: 20px;
+}
+
+.history-1 li {
+    display: flex;
+    margin-top: 20px;
+    font-size: 16px;
+    /* border: 1px solid black; */
+}
+
+.history-1 li i {
+    margin-right: 10px;
+    /* border: 1px solid black; */
+}
+
+.history-1 li h3 {
+    font-size: 20px;
+}
+
+.you-right {
     /* border: 1px solid blue; */
     height: 100%;
     width: 90%;
     overflow-y: scroll;
 }
-.you-right::-webkit-scrollbar{
+
+.you-right::-webkit-scrollbar {
     display: none;
 }
-.you-right-1{
+
+.you-right-1 {
     height: 150px;
     width: 100%;
     /* border: 1px solid black; */
     display: flex;
 }
-.you-image{
+
+.you-image {
     height: 120px;
     width: 120px;
     /* border: 1px solid black; */
@@ -47,12 +70,14 @@
     align-self: center;
     margin-left: 10px;
 }
-.you-image > img{
+
+.you-image>img {
     height: 100%;
     width: 100%;
     border-radius: 50%;
 }
-.you-details{
+
+.you-details {
     height: 130px;
     width: 300px;
     align-self: center;
@@ -60,35 +85,41 @@
     margin-left: 10px;
     text-align: left;
 }
-.you-details > h1{
+
+.you-details>h1 {
     margin-top: 0;
     margin-bottom: 0%;
     font-size: 34px;
 }
-.you-details > p{
+
+.you-details>p {
     margin-top: 5px;
     font-size: 13px;
     color: grey;
     margin-bottom: 0%;
 }
-.you-details > button{
+
+.you-details>button {
     border-radius: 20px;
     margin-top: 10px;
     border: none;
     margin-right: 10px;
     padding: 8px 10px;
 }
-.you-history-h1{
+
+.you-history-h1 {
     text-align: left;
     font-size: 20px;
     margin-top: 20px;
     margin-left: 10px;
     font-weight: 700;
 }
-.you-history-h1 > i{
+
+.you-history-h1>i {
     margin-right: 12px;
 }
-.hist-vids{
+
+.hist-vids {
     height: 460px;
     width: 100%;
     border-bottom: 1px solid grey;
@@ -96,24 +127,28 @@
     flex-wrap: wrap;
     justify-content: space-between;
 }
-.you-history-single{
+
+.you-history-single {
     /* border: 1px solid red; */
     width: 19.5%;
     height: 215px;
     text-align: left;
 }
-.you-hist-thumbnail{
+
+.you-hist-thumbnail {
     height: 120px;
     border-radius: 5px;
     width: 100%;
     /* border: 1px solid blue;   */
 }
-.you-hist-thumbnail > img{
+
+.you-hist-thumbnail>img {
     width: 100%;
     height: 100%;
     border-radius: 5px;
 }
-.you-hist-title{
+
+.you-hist-title {
     font-size: 13px;
     font-weight: 500;
     margin-top: 10px;
@@ -121,20 +156,23 @@
     overflow-y: hidden;
     height: 35px;
 }
-.you-hist-owner{
+
+.you-hist-owner {
     font-size: 12px;
     color: grey;
     font-weight: 400;
     margin-bottom: 7px;
     margin-top: 0px;
 }
-.you-hist-views{
+
+.you-hist-views {
     font-size: 12px;
     color: grey;
     font-weight: 400;
     margin-top: 0px;
 }
-.homeleft{
+
+.homeleft {
     height: 620px;
     width: 18%;
     /* border: 1px solid black; */
@@ -143,7 +181,8 @@
     text-align: left;
     /* left: 1%; */
 }
-.homeleft > span{
+
+.homeleft>span {
     font-size: 10px;
     margin-left: 10px;
     /* max-width: 100%; */
@@ -155,13 +194,11 @@
     font-size: 1rem;
     font-weight: 400;
     /* line-height: 1.4rem; */
-    margin-top:10px;
+    margin-top: 10px;
 
 
 }
-.homeleft > i{
-    /* margin-top: 35px; */
+
+.homeleft>i {
     margin-bottom: 30px;
-
-
 }

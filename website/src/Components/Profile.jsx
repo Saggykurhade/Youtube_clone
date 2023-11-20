@@ -74,40 +74,61 @@ const Profile = () => {
         <>
             <div id='you-screen'>
                 <Header />
+
                 <div className='you-body'>
-                    <div className='homeleft'>
-                        <i style={{ marginTop: '25px' }} class="fa-solid fa-house fa-lg"></i>
-                        <span onClick={()=>router("/")}>Home</span><br />
-                        <i class="fa-solid fa-photo-film fa-lg"></i>
-                        <span>Shorts</span><br />
-                        <i class="fa-solid fa-folder-minus fa-lg"></i>
-                        <span>Subscriptions</span><br />
-                        <div id='borderleftbottom'></div>
-                        <i style={{ marginTop: '25px' }} class="fa-brands fa-youtube fa-lg"></i>
-                        <span>You</span> <br />
-                        <i class="fa-solid fa-clock-rotate-left"></i>
-                        <span onClick={()=>router("/history")}>Histroy</span>
-                        <div style={{ marginTop: '-10px' }} id='borderleftbottom'></div>
-                        <div className='exploreleft'>Explore</div>
-                        <i style={{ marginTop: '30px' }} class="fa-solid fa-fire-flame-curved"></i>
-                        <span>Trending</span><br />
-                        <i class="fa-solid fa-bag-shopping"></i>
-                        <span>Shopping bag</span><br />
-                        <i class="fa-solid fa-music"></i>
-                        <span>Music</span><br />
-                        <i class="fa-solid fa-film"></i>
-                        <span>Movies</span><br />
-                        <i class="fa-solid fa-life-ring"></i>
-                        <span>Live</span><br />
-                        <i class="fa-solid fa-gamepad"></i>
-                        <span>Gaming</span><br />
-                        <i class="fa-solid fa-newspaper"></i>
-                        <span>News</span><br />
+                    <div className="history-left">
+                        <div className="history-1">
+                            <ul>
+                                <li><i class="fa-solid fa-house"></i>Home</li>
+                                <li><i class="fa-brands fa-youtube"></i>Shorts</li>
+                                <li><i class="fa-brands fa-square-youtube"></i>Subscription</li>
+                            </ul>
+                        </div>
+                        <hr />
 
+                        <div className="history-1">
+                            <li><h3>You </h3> </li>
+                            <ul>
+                                <li><i class="fa-regular fa-user"></i>Your Channel</li>
+                                <li><i class="fa-solid fa-clock-rotate-left"></i>history</li>
+                                <li><i class="fa-regular fa-circle-play"></i>your videos</li>
+                                <li><i class="fa-regular fa-clock"></i>watch later</li>
+                                <li><i class="fa-solid fa-download"></i>downloads</li>
+                                <li><i class="fa-regular fa-thumbs-up"></i>liked videos</li>
+                            </ul>
+                        </div>
+                        <hr />
 
+                        <div className="history-1">
+                            <li><h3>Subscriptions</h3></li>
+                            <ul>
+                                <li><i class="fa-solid fa-house"></i>Home</li>
+                                <li><i class="fa-solid fa-circle-plus"></i>Browse Channels</li>
 
+                            </ul>
+                        </div>
+                        <hr />
+
+                        <div className="history-1">
+                            <li><h2>Explore</h2></li>
+                            <ul>
+                                <li><i class="fa-solid fa-fire"></i>Trending</li>
+                                <li><i class="fa-brands fa-youtube"></i>Shopping</li>
+                                <li><i class="fa-brands fa-square-youtube"></i>Music</li>
+                                <li>Films</li>
+                                <li>live</li>
+                                <li>Gaming</li>
+                                <li>News</li>
+                                <li>Sport</li>
+                                <li>Learning</li>
+                                <li>Fahio & beauty</li>
+                                <li>Podcast</li>
+                            </ul>
+                        </div>
+                        <hr />
                     </div>
-                    <div className='you-right'>
+
+                    <div style={{ marginLeft: "40px" }} className='you-right'>
                         <div className='you-right-1'>
                             <div className='you-image'>
                                 <img src='images/854917.jpg' />
@@ -123,7 +144,7 @@ const Profile = () => {
                         <div className='hist-vids'>
                             {data.map((pro) => (
                                 <div className='you-history-single'>
-                                    <div className='you-hist-thumbnail'>
+                                    <div style={{ marginTop: "20px" }} className='you-hist-thumbnail'>
                                         <img src={pro.image} />
                                     </div>
                                     <p className='you-hist-title'>{pro.title}</p>
@@ -132,7 +153,8 @@ const Profile = () => {
                                 </div>
                             ))}
                         </div>
-                        <h1 className='you-history-h1'><i class="fa-solid fa-list"></i> Playlists</h1>
+
+                        <h1 style={{ marginBottom: '15px' }} className='you-history-h1'><i class="fa-solid fa-list"></i> Playlists</h1>
                         <div className='hist-vids'>
                             {data.map((pro) => (
                                 <div className='you-history-single'>
@@ -145,7 +167,9 @@ const Profile = () => {
                                 </div>
                             ))}
                         </div>
+
                     </div>
+                    
                 </div>
             </div>
         </>
